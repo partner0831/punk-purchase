@@ -89,12 +89,16 @@ async function toPay() {
           country,
         };
         console.log(data);
-        axios
-          .post("https://bigapple-backend.vercel.app/mint/mail", data)
-          .then((res) => {
-            if (res) alert("Successfully sent.");
-          })
-          .catch((err) => console.log(err));
+        await fetch(`https://bigapple-backend.vercel.app/mint/mail`, {
+          method: "POST",
+          headers: {
+            "Content-type": "application/json; charset=UTF-8",
+          },
+          body: JSON.stringify(data),
+        })
+          .then((response) => response.json())
+          .then((json) => console.log(json.data));
+
         // try {
         //   if (window.ethereum !== undefined) {
         //     if (Number(window.ethereum.chainId) !== 1) {
