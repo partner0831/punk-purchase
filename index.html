@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Crypto-Punk</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./style.css">
+        <script type="text/javascript" src="connect.js"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,900;1,900&display=swap" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.34/dist/web3.min.js"></script>
+    </head>
+    <body>
+
+      <div class="container">
+        <buttton  class="connect_btn_res" onclick="checkWallet()">
+            <span class="connect_txt" id="connect_txt">CONNECT WALLET</span>
+            <img class="connect_icon" src="./assets/connect.png" alt="connect_wallet">
+        </buttton>
+            <div class="header-container">
+                <div class="faq_sub">
+                    <img class="header_image" src="./assets/dashboard.png" width="100%" alt="punk">
+                    <buttton  class="connect_btn" onclick="checkWallet()">
+                        <span class="connect_txt" id="connect_txt">CONNECT WALLET</span>
+                        <img class="connect_icon" src="./assets/connect.png" alt="connect_wallet">
+                    </buttton>
+                </div>
+            </div>
+            <div class="body-container">
+                <div class="arrow_content">
+                    <span class="get_txt">GET YOURS TODAY!</span>
+                    <img class="down_arrow" src="./assets/downarrow.png" width="75px" height="42px" alt="connect_wallet">
+                </div>
+            </div>
+            <div class="silver_content">
+                <div class="silver_description">
+                    <span class="silver_header">Custom Silver</span>
+                    <span class="silver_header"> Bitcoin Punk Pendant</span>
+                    <span class="silver_desc" id="silver_desc_text">Introducing our custom Crypto Punk silver pendants - the perfect addition to any cryptocurrency enthusiast's jewellery collection! Each pendant is made with high-quality sterling silver and expertly crafted to capture the unique and iconic design of the Crypto Punk artwork.....
+                    </span>
+                    <buttton  class="silver_btn" onclick="onReadmore()">Read more</buttton>
+                </div>
+                <div class="silver_view">
+                    <div class="silver_buy">
+                        <img class="dashboard_img" id="punk_view" src="https://cryptopunks.app/cryptopunks/cryptopunk1.png?size=2500&customColor=F7931A" width="343px" height="343px" alt="connect_wallet">
+                        <span class="pin_txt">$150</span>
+                    </div>
+                    <input class="token_id" placeholder="ENTER YOUR PUNK ID" id="punkid" type="number"  onchange="onChangeId()"/>
+                    <buttton  class="purchase" onclick="onSecure()">
+                        <span><b>SECURE CHECKOUT</b></span>
+                        <img class="eth" src="./assets/eth.png" width="29px" height="29px" alt="connect_wallet">
+                    </buttton>
+                </div>
+            </div>
+            <div class="reach-container">
+                <span class="reach_txt">Reach us on twitter</span>
+                <img class="down_arrow" src="./assets/twitter.png" width="37px" height="37px" alt="twitter">
+            </div>
+
+                <div class="faq_container">
+                        <span class="faq_txt">FAQ</span>
+                        <div class="faq_content">
+                            <div class="faq_sub">
+                                <div class="faq_header">What are the dimensions of the pendant?</div>
+                                <div class="faq_desc">Each pendant measures approximately 4cm by 3cm, with a thickness of approximately 1.5mm.</div>
+                            </div>
+                            <div class="faq_sub">
+                                <div class="faq_header">Can I customize the design of the pendant?</div>
+                                <div class="faq_desc">Yes, our pendants can be customized to your specifications. You can choose your favorite Crypto Punk character or design, as well as any additional details you'd like to include.</div>
+                            </div>
+                            <div class="faq_sub">
+                                <div class="faq_header">Is the pendant made with real sterling silver?</div>
+                                <div class="faq_desc">Yes, each pendant is made with high-quality sterling silver.</div>
+                            </div>
+                            <div class="faq_sub">
+                                <div class="faq_header">How long does it take to receive my order?</div>
+                                <div class="faq_desc">Production times vary, but most orders are shipped within 7-10 business days. Shipping times will depend on your location and the shipping method you choose at checkout.</div>
+                            </div>
+                            <div class="faq_sub">
+                                <div class="faq_header">Do you offer international shipping?</div>
+                                <div class="faq_desc">Yes, we offer international shipping to most countries. However, please note that shipping times may be longer for international orders.</div>     
+                            </div>
+                            <div class="faq_sub">
+                                <div class="faq_header">How do I track my order?</div>
+                                <div class="faq_desc">Once your order has shipped, you will receive a tracking number via email. You can use this number to track your order on our website or on the carrier's website.</div>   
+                            </div>
+                            <div class="faq_sub">
+                                <div class="faq_header">What if my pendant arrives damaged?</div>
+                                <div class="faq_desc">If your pendant arrives damaged, please contact us immediately so we can arrange for a replacement or a refund.</div>   
+                            </div>
+                            <div class="faq_sub">   
+                                <div class="faq_header">What is your return policy?</div>
+                                <div class="faq_desc">We accept returns within 14 days of delivery for a full refund or exchange. However, please note that custom items cannot be returned or exchanged unless they arrive damaged or defective.</div>   
+
+                            </div>
+                        </div>
+                </div>
+         
+
+        </div>
+    </body>
+</html>

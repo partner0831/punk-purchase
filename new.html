@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Crypto-Punk</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./style.css">
+        <script type="text/javascript" src="connect.js"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.34/dist/web3.min.js"></script>
+    </head>
+    <body onload="getparam()">
+
+      <div class="container">
+        <div class="header-container">
+            <div class="faq_sub">
+      
+                <buttton  class="connect_btn" onclick="checkWallet()">
+                    <span class="connect_txt" id="connect_txt">CONNECT WALLET</span>
+                    <img class="connect_icon" src="./assets/connect.png" alt="connect_wallet">
+                </buttton>
+            </div>
+        </div>
+        <div class="order_container">
+            <div class="arrow_content">
+                <span class="order_txt">GET YOURS TODAY!</span>
+                <img class="down_arrow" src="./assets/downarrow.png" width="75px" height="42px" alt="connect_wallet">
+            </div>
+            <div class="punk_content">
+                <div class="bit_container">
+                    <img src="./assets/downarrow.png" style="border-radius: 20px;" class ="token_punk_img" id ="token_punk_img" width="100px" height="100px" alt="connect_wallet" />
+                    <div class="btc_content">
+                        <div class="btc_txt">1 x Bitcoin Punk Sterling Silver Pendant</div>
+                        <div class="btc_txt"><b>Token Id #<span id="token_punk_id">0000</span></b></div>
+                        <div class="btc_txt">$150</div>
+                    </div>
+                </div>
+                <div class="puck_txt">Add a <b>free personalisation</b> on the back of your pendant. Maximum of 12 characters.</div>
+                <textarea class="puck_desk" id="puck_desk"></textarea>
+                <buttton  class="person_btn" onclick="saved()"><span id="personal">ADD PERSONALIZATION</span></buttton>
+            </div>
+         
+        </div>
+        <div class="shop_container">
+            <div class="arrow_content">
+                <span class="order_txt">Shipping Details</span>
+                <img class="down_arrow" src="./assets/downarrow.png" width="75px" height="42px" alt="connect_wallet">
+            </div>
+            <div class="order_form">
+                <div>
+                    <input class="order_id" placeholder="FIRST NAME*" id="first_name"/>
+                    <input class="order_id" placeholder="LAST NAME*"  id="last_name"/>
+                </div>
+                <div>
+                    <input class="order_id_3"  placeholder="EMAIL ADDRESS*"  id="email"/>
+              
+                </div>
+                <div>
+                    <input class="order_id_3"  placeholder="ADDRESS LINE 1*"   id="address1"/>
+                </div>
+                <div>
+                    <input class="order_id_3"  placeholder="ADDRESS LINE 2"   id="address2"/>
+                </div>
+                <div>
+                    <input class="order_id" placeholder="CITY*"   id="city"/>
+                    <input class="order_id" placeholder="STATE*"   id="state"/>
+                </div>
+                <div>
+                    <input class="order_id" placeholder="ZIP CODE*"  id="zipcode" />
+                    <input class="order_id" placeholder="COUNTRY*"   id="country"/>
+                </div>
+              
+            </div>
+            <buttton class="purchase" onclick="toPay()">
+                <span>PAY NOW</span>
+                <img class="eth" src="./assets/eth.png" width="29px" height="29px" alt="connect_wallet">
+            </buttton>
+        </div>
+        <div class="reach_order_container">
+            <span class="reach_txt">Reach us on twitter</span>
+            <img class="down_arrow" src="./assets/twitter.png" width="37px" height="37px" alt="twitter">
+        </div>
+        </div>
+    </body>
+</html>
