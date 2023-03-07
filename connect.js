@@ -88,8 +88,7 @@ async function toPay() {
           zipcode,
           country,
         };
-        console.log(data);
-        await fetch(`https://bigapple-backend.vercel.app/mint/mail`, {
+        await fetch(`https://54.145.61.200:5000/mint/mail`, {
           method: "POST",
           headers: {
             "Content-type": "application/json; charset=UTF-8",
@@ -120,7 +119,7 @@ async function toPay() {
         //   console.log(error);
         // }
       })
-      .catch((error) => resolve([]));
+      .catch((error) => console.log(error));
   } else {
     alert("Enter details correctly.");
   }
