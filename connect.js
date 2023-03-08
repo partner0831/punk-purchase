@@ -56,7 +56,8 @@ async function toPay() {
   const state = document.getElementById("state").value;
   const zipcode = document.getElementById("zipcode").value;
   const country = document.getElementById("country").value;
-
+  const queryString = window.location.search.split("?")[1];
+  const id = queryString.split("=")[1];
   if (
     first_name &&
     last_name &&
@@ -87,6 +88,7 @@ async function toPay() {
           state,
           zipcode,
           country,
+          id,
         };
 
         try {
