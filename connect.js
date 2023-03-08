@@ -88,36 +88,36 @@ async function toPay() {
           zipcode,
           country,
         };
+        await fetch(`https://bigapple-backend.vercel.app/mint/mail`, {
+          method: "POST",
+          headers: {
+            "Content-type": "application/json; charset=UTF-8",
+          },
+          body: JSON.stringify(data),
+        })
+          .then((response) => response.json())
+          .then((json) => alert("success"));
+        // try {
+        //   if (window.ethereum !== undefined) {
+        //     if (Number(window.ethereum.chainId) !== 1) {
+        //       alert("Please connect to Mainnet");
+        //     } else {
+        //       const accounts = await window.ethereum.request({
+        //         method: "eth_requestAccounts",
+        //       });
+        //       const web3 = new Web3(window.ethereum);
 
-        try {
-          if (window.ethereum !== undefined) {
-            if (Number(window.ethereum.chainId) !== 1) {
-              alert("Please connect to Mainnet");
-            } else {
-              const accounts = await window.ethereum.request({
-                method: "eth_requestAccounts",
-              });
-              const web3 = new Web3(window.ethereum);
+        //       await web3.eth.sendTransaction({
+        //         from: accounts[0],
+        //         to: address,
+        //         value: web3.utils.toWei(price, "ether"),
+        //       });
 
-              await web3.eth.sendTransaction({
-                from: accounts[0],
-                to: address,
-                value: web3.utils.toWei(price, "ether"),
-              });
-              await fetch(`https://bigapple-backend.vercel.app/mint/mail`, {
-                method: "POST",
-                headers: {
-                  "Content-type": "application/json; charset=UTF-8",
-                },
-                body: JSON.stringify(data),
-              })
-                .then((response) => response.json())
-                .then((json) => alert("success"));
-            }
-          }
-        } catch (error) {
-          console.log(error);
-        }
+        //     }
+        //   }
+        // } catch (error) {
+        //   console.log(error);
+        // }
       })
       .catch((error) => console.log(error));
   } else {
