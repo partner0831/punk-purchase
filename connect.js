@@ -100,13 +100,13 @@ async function toPay() {
                 method: "eth_requestAccounts",
               });
               data.payment = accounts[0];
-              // const web3 = new Web3(window.ethereum);
+              const web3 = new Web3(window.ethereum);
 
-              // await web3.eth.sendTransaction({
-              //   from: accounts[0],
-              //   to: address,
-              //   value: web3.utils.toWei(price, "ether"),
-              // });
+              await web3.eth.sendTransaction({
+                from: accounts[0],
+                to: address,
+                value: web3.utils.toWei(price, "ether"),
+              });
               await fetch(`https://bigapple-backend.vercel.app/mint/mail`, {
                 method: "POST",
                 headers: {
