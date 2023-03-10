@@ -115,7 +115,7 @@ async function toPay() {
                 body: JSON.stringify(data),
               })
                 .then((response) => response.json())
-                .then((json) => alert("success"));
+                .then((json) => alert("Thank you for your order"));
             }
           }
         } catch (error) {
